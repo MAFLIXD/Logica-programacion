@@ -1,13 +1,12 @@
 //Variables:
-
-let numeroSecreto = Math.floor(Math.random()*10)+1;
+let numeroMaximoPosible = 100;
+let numeroSecreto = Math.floor(Math.random()*numeroMaximoPosible)+1;
 let numeroUsuario = 0;
 let intentos = 1;
-let palabraVeces = "vez";
 let maximosIntentos = 3;
 
 while(numeroUsuario != numeroSecreto) {
-        numeroUsuario = prompt("Me indicas un numero entre 1 y 10 porfavor:");
+        numeroUsuario = parseInt(prompt(`Me indicas un numero entre 1 y ${numeroMaximoPosible} porfavor:`));
 
         
     console.log(numeroUsuario);
@@ -26,7 +25,7 @@ while(numeroUsuario != numeroSecreto) {
             }
             //Incrementamos el comtador cuando no acierta 
             intentos++;
-            palabraVeces = "veces";
+            
             if(intentos > maximosIntentos){
                 alert(`Llegaste al numero maximo de ${maximosIntentos} intentos`);
                 break; 
